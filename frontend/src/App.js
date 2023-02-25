@@ -1,5 +1,7 @@
+import Title from "./components/title/title";
+
 function App() {
-  return <h1>Hello, World!</h1>;
+  return <Title />;
 }
 
 export default App;
