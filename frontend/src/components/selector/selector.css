@@ -8,22 +8,26 @@
   flex-direction: column;
   align-items: center;
 
+  gap: 1rem;
+
   width: 100%;
-  max-width: 60rem;
+  max-width: 40rem;
+
+  padding: 1rem;
 
   background-color: #eee;
 }
 
 .selector > .selector-input {
-  margin: 1rem;
   display: flex;
   gap: 1rem;
 
-  padding-left: 1rem;
-  padding-right: 1rem;
+  width: 100%;
 }
 
 .selector > .selector-input > select {
+  flex: 1;
+
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
@@ -31,6 +35,8 @@
 }
 
 .selector > .selector-input > input[type="text"] {
+  flex: 1;
+
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
@@ -44,25 +50,23 @@
   padding-bottom: 0.5rem;
 }
 
-.selector > .submit {
+.selector > button {
   background: none;
   border: none;
 
   background-color: lightblue;
-  padding-left: 3rem;
-  padding-right: 3rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-radius: 0.5rem;
 
-  margin: 1rem;
-
   cursor: pointer;
 
   transition-duration: 0.1s;
+
+  width: 100%;
 }
 
-.selector > .submit:active {
+.selector > button:active {
   transform: scale(0.93);
 }
 
