@@ -18,9 +18,26 @@
   margin: 1rem;
   display: flex;
   gap: 1rem;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.selector > .selector-input > select {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .selector > .selector-input > input[type="text"] {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.selector > .selector-input > select {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
@@ -32,8 +49,8 @@
   border: none;
 
   background-color: lightblue;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-radius: 0.5rem;
@@ -41,6 +58,12 @@
   margin: 1rem;
 
   cursor: pointer;
+
+  transition-duration: 0.1s;
+}
+
+.selector > .submit:active {
+  transform: scale(0.93);
 }
 
 .selector > .selector-input > .new-row {
