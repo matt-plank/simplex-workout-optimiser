@@ -18,5 +18,5 @@ from django.urls import include, path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("optimised_workout/", include("optimiser.urls")),
+    path("optimised_workout", include("optimiser.urls")),
 ]

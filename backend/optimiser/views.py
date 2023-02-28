@@ -7,13 +7,11 @@ from rest_framework.response import Response
 @api_view(["POST"])
 def create_optimised_workout(request):
     """Create a new "optimised workout"."""
-    request_json: list = json.loads(request.body)
+    request_json: list[str] = json.loads(request.body)
 
-    # request_json = [{"name": "..."}]
+    response: list[int] = []
 
-    for i, exercise in enumerate(request_json):
-        exercise["sets"] = 10
+    for exercise in request_json:
+        response.append(10)
 
-        request_json[i] = exercise
-
-    return Response(request_json)
+    return Response(response)

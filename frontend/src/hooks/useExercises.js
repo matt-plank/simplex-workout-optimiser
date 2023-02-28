@@ -3,6 +3,7 @@ import SelectorInput from "../components/selector/selectorInput";
 
 const useExercises = () => {
   const [exercises, setExercises] = useState(["Select"]);
+  const [sets, setSets] = useState([]);
 
   const newExercise = () => {
     setExercises((currentExercises) => {
@@ -47,6 +48,9 @@ const useExercises = () => {
       });
     };
 
+    let displaySets = "";
+    if (sets[i]) displaySets = sets[i];
+
     return (
       <SelectorInput
         key={i}
@@ -54,11 +58,12 @@ const useExercises = () => {
         addFunction={addFunction}
         removeFunction={removeFunction}
         updateFunction={updateFunction}
+        sets={displaySets}
       />
     );
   });
 
-  return [exerciseElements, newExercise];
+  return [exercises, setSets, exerciseElements];
 };
 
 export default useExercises;
