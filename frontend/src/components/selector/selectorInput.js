@@ -11,10 +11,14 @@ const SelectorInput = ({ exercises, selected, sets, addFunction, removeFunction,
 
       <select value={selected} onChange={updateFunction}>
         <option value="">Select</option>
-        {exercises.map((exercise, i) => (
-          <option key={i} value={exercise}>
-            {exercise}
-          </option>
+        {exercises.map((exerciseGroup, i) => (
+          <optgroup label={exerciseGroup.group}>
+            {exerciseGroup.exercises.map((exercise, i) => (
+              <option key={i} value={exercise}>
+                {exercise}
+              </option>
+            ))}
+          </optgroup>
         ))}
       </select>
 
