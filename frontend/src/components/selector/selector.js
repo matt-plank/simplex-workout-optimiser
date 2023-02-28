@@ -1,8 +1,10 @@
 import useExercises from "../../hooks/useExercises";
+import useFetchExercises from "../../hooks/useFetchExercises";
 import "./selector.css";
 
 const Selector = () => {
-  const [exercises, setSets, exerciseElements] = useExercises();
+  const exerciseSelection = useFetchExercises();
+  const [exercises, exerciseElements, setSets] = useExercises(exerciseSelection);
 
   const fetchOptimisedWorkout = async () => {
     const response = await fetch("http://localhost:8000/optimised_workout", {

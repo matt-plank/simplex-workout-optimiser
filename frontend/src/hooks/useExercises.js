@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SelectorInput from "../components/selector/selectorInput";
 
-const useExercises = () => {
+const useExercises = (exerciseSelection) => {
   const [exercises, setExercises] = useState(["Select"]);
   const [sets, setSets] = useState([]);
 
@@ -43,6 +43,7 @@ const useExercises = () => {
 
     return (
       <SelectorInput
+        exercises={exerciseSelection}
         key={i}
         selected={exercise}
         addFunction={addFunction}
@@ -53,7 +54,7 @@ const useExercises = () => {
     );
   });
 
-  return [exercises, setSets, exerciseElements];
+  return [exercises, exerciseElements, setSets];
 };
 
 export default useExercises;
