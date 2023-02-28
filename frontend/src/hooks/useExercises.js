@@ -5,27 +5,17 @@ const useExercises = () => {
   const [exercises, setExercises] = useState(["Select"]);
   const [sets, setSets] = useState([]);
 
-  const newExercise = () => {
-    setExercises((currentExercises) => {
-      return [...currentExercises, "Select"];
-    });
-  };
-
-  const removeExercise = (exerciseIndex) => {
-    setExercises((currentExercises) => {
-      if (currentExercises.length === 1) return currentExercises;
-
-      const result = [...currentExercises];
-
-      result.splice(exerciseIndex, 1);
-
-      return result;
-    });
-  };
-
   const exerciseElements = exercises.map((exercise, i) => {
     const removeFunction = () => {
-      removeExercise(i);
+      setExercises((currentExercises) => {
+        if (currentExercises.length === 1) return currentExercises;
+
+        const result = [...currentExercises];
+
+        result.splice(i, 1);
+
+        return result;
+      });
     };
 
     const updateFunction = (e) => {
