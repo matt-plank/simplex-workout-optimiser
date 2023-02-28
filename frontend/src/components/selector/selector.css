@@ -74,3 +74,10 @@
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+
+.selector > .selector-input > button {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  cursor: pointer;
+}

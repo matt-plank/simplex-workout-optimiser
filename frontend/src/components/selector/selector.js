@@ -1,13 +1,17 @@
+import useExercises from "../../hooks/useExercises";
 import "./selector.css";
-import SelectorInput from "./selectorInput";
 
 const Selector = () => {
+  const [exercises, newExercise] = useExercises();
+
   return (
     <div className="selector-wrapper">
       <div className="selector">
-        <SelectorInput />
+        {exercises}
 
-        <button className="new-row">New Exercise</button>
+        <button className="new-row" onClick={newExercise}>
+          New Exercise
+        </button>
         <button className="submit">Optimise</button>
       </div>
     </div>
