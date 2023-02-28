@@ -37,8 +37,24 @@ const useExercises = () => {
       });
     };
 
+    const addFunction = (e) => {
+      setExercises((currentExercises) => {
+        const result = [...currentExercises];
+
+        result.splice(i + 1, 0, "Select");
+
+        return result;
+      });
+    };
+
     return (
-      <SelectorInput key={i} selected={exercise} removeFunction={removeFunction} updateFunction={updateFunction} />
+      <SelectorInput
+        key={i}
+        selected={exercise}
+        addFunction={addFunction}
+        removeFunction={removeFunction}
+        updateFunction={updateFunction}
+      />
     );
   });
 

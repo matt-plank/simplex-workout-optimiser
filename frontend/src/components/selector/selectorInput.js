@@ -1,8 +1,12 @@
-import { AiFillDelete } from "react-icons/ai";
+import { AiFillDelete, AiFillPlusSquare } from "react-icons/ai";
 
-const SelectorInput = ({ selected, sets, removeFunction, updateFunction }) => {
+const SelectorInput = ({ selected, sets, addFunction, removeFunction, updateFunction }) => {
   return (
     <div className="selector-input">
+      <button onClick={addFunction}>
+        <AiFillPlusSquare />
+      </button>
+
       <select value={selected} onChange={updateFunction}>
         <option value="">Select</option>
         <optgroup label="Push">
