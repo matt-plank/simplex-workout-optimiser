@@ -1,0 +1,53 @@
+.selector > .selector-input {
+  display: flex;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+.selector > .selector-input > select {
+  flex: 1;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  border: none;
+  background-color: rgb(216, 216, 216);
+  border-radius: 0.2rem;
+}
+
+.selector > .selector-input > input[type="text"] {
+  flex: 1;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  border: none;
+  background-color: rgb(216, 216, 216);
+  border-radius: 0.2rem;
+}
+
+.selector > .selector-input > button {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  border: none;
+  background: none;
+  background-color: rgb(216, 216, 216);
+  border-radius: 0.2rem;
+
+  cursor: pointer;
+  transition-duration: 0.1s;
+}
+
+.selector > .selector-input > button:active {
+  transform: scale(0.93);
+}
+
+.selector > .selector-input > .remove {
+  color: rgb(173, 0, 0);
+}

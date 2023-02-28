@@ -1,5 +1,7 @@
 import { AiFillDelete, AiFillPlusSquare } from "react-icons/ai";
 
+import "./selectorInput.css";
+
 const SelectorInput = ({ selected, sets, addFunction, removeFunction, updateFunction }) => {
   return (
     <div className="selector-input">
@@ -39,7 +41,7 @@ const SelectorInput = ({ selected, sets, addFunction, removeFunction, updateFunc
 
       <input type="text" placeholder="Sets" value={sets} />
 
-      <button onClick={removeFunction}>
+      <button onClick={removeFunction} className="remove">
         <AiFillDelete />
       </button>
     </div>

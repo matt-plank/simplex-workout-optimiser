@@ -9,9 +9,6 @@ const Selector = () => {
       <div className="selector">
         {exercises}
 
-        <button className="new-row" onClick={newExercise}>
-          New Exercise
-        </button>
         <button className="submit">Optimise</button>
       </div>
     </div>
