@@ -12,6 +12,8 @@ const useExercises = () => {
 
   const removeExercise = (exerciseIndex) => {
     setExercises((currentExercises) => {
+      if (currentExercises.length === 1) return currentExercises;
+
       const result = [...currentExercises];
 
       result.splice(exerciseIndex, 1);
