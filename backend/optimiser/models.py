@@ -19,7 +19,7 @@ class DisplayGroup(models.Model):
 class Exercise(models.Model):
     name = models.CharField(max_length=60)
     display_group = models.ManyToManyField(DisplayGroup)
-    muscle_group = models.ManyToManyField(MuscleGroup)
+    muscle_group = models.ManyToManyField(MuscleGroup, related_name="exercises")
 
     def __str__(self):
         return self.name
