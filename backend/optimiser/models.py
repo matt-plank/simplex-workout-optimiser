@@ -20,6 +20,7 @@ class Exercise(models.Model):
     name = models.CharField(max_length=60)
     display_group = models.ManyToManyField(DisplayGroup)
     muscle_group = models.ManyToManyField(MuscleGroup, related_name="exercises")
+    heavy_compound = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
